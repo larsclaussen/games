@@ -46,7 +46,7 @@ if __name__ == '__main__':
             print "je moet een getal invoeren, probeer opnieuw..."
             continue
         gok = int(_gok)
-        if _gok > grotste_getal or _gok < kleinste_getal:
+        if gok > grotste_getal or gok < kleinste_getal:
             print "je moet een getal tussen {} and {} invoeren, " \
                   "probeer opnieuw...".format(
                 kleinste_getal, grotste_getal)
