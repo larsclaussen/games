@@ -2,6 +2,8 @@ from random import randint
 import sys
 from pyemojify import emojify
 
+from games import settings
+
 BOLD = '\033[1m'
 END = '\033[0m'
 
@@ -28,17 +30,18 @@ def feleciteer_speler(vraag_counter):
 
 
 if __name__ == '__main__':
-    kleinste_getal = 1
-    grotste_getal = 100
+    kleinste_getal = settings.KLEINSTE_GETAL
+    grotste_getal = settings.GROTSTE_GETAL
+    aantal_dat_je_mag_vragen = settings.AANTAL_DAT_JE_MAG_VRAGEN
+
     getal = randint(kleinste_getal, grotste_getal)
 
     print "Hallo! Ben je er klaar voor? " \
           "Het getal is tussen {} en {}".format(
-        kleinste_getal, grotste_getal)
+        settings.kleinste_getal, settings.grotste_getal)
 
     gok = 0
     vraag_counter = 0
-    aantal_dat_je_mag_vragen = 7
 
     while gok != getal and vraag_counter < aantal_dat_je_mag_vragen:
         _gok = raw_input("Wat denk je is het getal?   ")
